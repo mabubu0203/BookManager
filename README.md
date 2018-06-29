@@ -9,6 +9,7 @@
     `$ docker-compose -f docker-compose.yml build`  
     `$ docker-compose -f docker-compose.yml up -d`  
 3. GradleタスクよりbootRun(`:micro-api -> Tasks -> application -> bootRun`)
+4. GradleタスクよりbootRun(`:micro-admin -> Tasks -> application -> bootRun`)
 
 ## 停止方法
 
@@ -32,6 +33,7 @@ BookManager                           … rootプロジェクト
 - - docker-compose.yaml               … dockerコンテナ起動ファイル
 - document                            … 各種ドキュメント格納フォルダ
 - gradle                              … 
+- micro-admin                         … 管理サーバーを格納したプロジェクト
 - micro-api                           … RestApiプロジェクト
 - micro-interfaces                    … RestApiのI/Oを定義したプロジェクト
 - micro-test                          … Testツールを格納したプロジェクト
@@ -44,6 +46,7 @@ BookManager                           … rootプロジェクト
 ## Endpoints
 
 [SonarQube][]  
+[Admin][]  
 [BookManager][]  
 
 ## 環境
@@ -53,8 +56,8 @@ BookManager                           … rootプロジェクト
 | name              | version
 | :---------------- | :-------
 | OpenJdk           | 10
-| DockerCompose     | 1.20
-| Gradle            | 4.7 
+| DockerCompose     | 1.21.2
+| Gradle            | 4.8.1 
 | SonarQube         | 7.x
 
 ### Library
@@ -65,5 +68,6 @@ BookManager                           … rootプロジェクト
 | SpringFox          | 2.x
 | Doma               | x.x
 
-[BookManager]: http://localhost:8085/swagger-ui.html     "BookManager"
 [SonarQube]: http://localhost:9000/sonar/     "SonarQube"
+[Admin]: http://localhost:8095/admin     "BookManager"
+[BookManager]: http://localhost:8085/swagger-ui.html     "BookManager"

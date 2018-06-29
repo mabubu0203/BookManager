@@ -7,6 +7,12 @@ buildscript {
         // SpringBoot
         springBootVersion = springbootVersion
 
+        // SpringBootAdmin
+        springbootAdminVersion = springbootAdminVersion
+
+        // ModelMapper
+        modelmapperVersion = modelmapperVersion
+
         // jUnit5
         jupiterVersion = jupiterVersion
         platformVersion = platformVersion
@@ -23,7 +29,7 @@ buildscript {
 }
 
 plugins {
-    id "org.springframework.boot" version "2.0.2.RELEASE"
+    id "org.springframework.boot" version "2.0.3.RELEASE"
     id "org.sonarqube" version "2.6.2"
 }
 
@@ -116,6 +122,10 @@ subprojects{
         dependsOn 'clean', 'check'
     }
 
+}
+
+project(':micro-admin') {
+    ext.moduleName = 'jp.team.study.bm.admin'
 }
 
 project(':micro-api') {

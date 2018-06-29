@@ -1,0 +1,45 @@
+# ----------------------------------------
+# SPRING PROPERTIES
+# ----------------------------------------
+spring:
+  aop:
+    auto: true
+  beaninfo:
+    ignore: true
+  profiles: dev
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+  info:
+    build:
+      location: classpath:META-INF/build-info.properties
+    git:
+      location: classpath:git.properties
+  main:
+    banner-mode: console
+# ----------------------------------------
+# DATA PROPERTIES
+# ----------------------------------------
+
+# ----------------------------------------
+# WEB PROPERTIES
+# ----------------------------------------
+server:
+  port: 8086
+  context-path: /BookManagerApi
+  servlet:
+    jsp:
+      registered: false
+  ssl:
+    enabled: false
+  tomcat:
+    accesslog:
+      directory: logs
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: access_log
+      rotate: true
+      suffix: .log
+    uri-encoding: UTF-8

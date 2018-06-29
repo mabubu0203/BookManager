@@ -1,0 +1,16 @@
+
+
+dependencies {
+
+    compile("de.codecentric:spring-boot-admin-starter-server:${springbootAdminVersion}")
+
+}
+
+springBoot {
+    buildInfo()
+    mainClassName = 'jp.team.study.book.manage.admin.AdminApp'
+}
+
+war {
+    archiveName = 'Admin.war'
+}
