@@ -66,7 +66,6 @@ BookManager                           … rootプロジェクト
 | :----------------- | :------
 | SpringBoot         | 2.0.x
 | SpringFox          | 2.x
-| Doma               | x.x
 
 [SonarQube]: http://localhost:9000/sonar/     "SonarQube"
 [Admin]: http://localhost:8095/admin     "BookManager"

@@ -17,9 +17,6 @@ buildscript {
         jupiterVersion = jupiterVersion
         platformVersion = platformVersion
 
-        // Doma
-        springbootDomaVersion = springbootDomaVersion
-
     }
 
     repositories {
@@ -29,7 +26,7 @@ buildscript {
 }
 
 plugins {
-    id "org.springframework.boot" version "2.0.3.RELEASE"
+    id "org.springframework.boot" version "2.0.5.RELEASE"
     id "org.sonarqube" version "2.6.2"
 }
 
@@ -62,7 +59,7 @@ allprojects {
     }
 
     jacoco {
-        toolVersion = "0.8.1"
+        toolVersion = "0.8.2"
         reportsDir = file("$buildDir/customJacocoReportDir")
     }
 
@@ -142,6 +139,10 @@ project(':micro-interfaces') {
         compile project(':micro-validator')
         testCompile project(':micro-test')
     }
+}
+
+project(':micro-rdb') {
+    ext.moduleName = 'jp.team.study.bm.rdb'
 }
 
 project(':micro-test') {
