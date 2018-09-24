@@ -1,2 +1,3 @@
-create role pgtest login password 'pgtest';
-create role sonar login password 'sonar';
+/* ユーザーを作成します。 */
+CREATE ROLE pgtest login password 'pgtest';
+create ROLE sonar login password 'sonar';

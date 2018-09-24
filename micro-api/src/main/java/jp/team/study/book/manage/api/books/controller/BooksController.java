@@ -3,7 +3,6 @@ package jp.team.study.book.manage.api.books.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
 import jp.team.study.book.manage.interfaces.definitions.responses.Sample;
-import jp.team.study.book.manage.validator.constraints.IdField;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,6 @@ public class BooksController {
     @GetMapping(value = {"/{id}"})
     public ResponseEntity<Sample> findBook(
             @PathVariable(name = "id")
-            @IdField
             @ApiParam(example = "1") final Long id
     ) {
 

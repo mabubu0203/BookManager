@@ -16,7 +16,6 @@ buildscript {
         // jUnit5
         jupiterVersion = jupiterVersion
         platformVersion = platformVersion
-
     }
 
     repositories {
@@ -128,7 +127,7 @@ project(':micro-admin') {
 project(':micro-api') {
     ext.moduleName = 'jp.team.study.bm.api'
     dependencies {
-        compile project(':micro-interfaces'), project(':micro-validator')
+        compile project(':micro-interfaces'), project(':micro-validator'), project(':micro-rdb')
         testCompile project(':micro-test')
     }
 }

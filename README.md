@@ -28,6 +28,7 @@ Gradleのマルチプロジェクト構成をとっています。
 BookManager                           … rootプロジェクト
 - config                              … build.gradleから使用するTool群の設定ファイル格納フォルダ
 - docker                              … docker-compose格納フォルダ
+- - pgadmin                           … 
 - - postgres                          … 
 - - sonarqube                         … 
 - - docker-compose.yaml               … dockerコンテナ起動ファイル
@@ -45,6 +46,7 @@ BookManager                           … rootプロジェクト
 
 ## Endpoints
 
+[PgAdmin][]
 [SonarQube][]  
 [Admin][]  
 [BookManager][]  
@@ -58,7 +60,7 @@ BookManager                           … rootプロジェクト
 | OpenJdk           | 10
 | DockerCompose     | 1.21.2
 | Gradle            | 4.8.1 
-| SonarQube         | 7.x
+| SonarQube         | 7.1
 
 ### Library
 
@@ -67,6 +69,7 @@ BookManager                           … rootプロジェクト
 | SpringBoot         | 2.0.x
 | SpringFox          | 2.x
 
+[PgAdmin]: http://localhost:80/browser/     "PgAdmin"
 [SonarQube]: http://localhost:9000/sonar/     "SonarQube"
 [Admin]: http://localhost:8095/admin     "BookManager"
 [BookManager]: http://localhost:8085/swagger-ui.html     "BookManager"

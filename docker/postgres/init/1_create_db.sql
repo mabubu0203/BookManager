@@ -1,2 +1,3 @@
-create database pgtest;
-create database sonar;
+/* DATABASEを作成 */
+CREATE DATABASE pgtest;
+CREATE DATABASE sonar;

@@ -1,0 +1,17 @@
+package jp.team.study.book.manage.rdb.repository;
+
+
+import jp.team.study.book.manage.rdb.domain.Sample;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
+
+/**
+ * @author uratamanabu
+ * @version 1.0
+ * @since 1.0
+ */
+@Repository
+@RepositoryRestResource(path = "sample")
+public interface SampleRepository extends JpaRepository<Sample, Long> {
+}
