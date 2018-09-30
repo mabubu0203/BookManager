@@ -6,15 +6,18 @@
 CREATE SCHEMA IF NOT EXISTS pgtest AUTHORIZATION pgtest;
 
 /* ドメインを作成します。 */
-CREATE DOMAIN pgtest.domain_create_datetime AS TIMESTAMP;
-CREATE DOMAIN pgtest.domain_update_count AS SMALLINT;
-CREATE DOMAIN pgtest.domain_update_datetime AS TIMESTAMP;
+CREATE DOMAIN pgtest.DOMAIN_VERSION AS INT;
+CREATE DOMAIN pgtest.DOMAIN_DELETE_FLAG AS BOOLEAN;
+CREATE DOMAIN pgtest.DOMAIN_CREATE_DATETIME AS TIMESTAMP;
+CREATE DOMAIN pgtest.DOMAIN_UPDATE_DATETIME AS TIMESTAMP;
 
 /* TABLEを作成 */
-CREATE TABLE IF NOT EXISTS pgtest.sample (
-    id SERIAL NOT NULL,
-    create_datetime domain_create_datetime,
-    update_count domain_update_count,
-    update_datetime domain_update_datetime,
+CREATE TABLE IF NOT EXISTS pgtest.SAMPLE (
+    ID SERIAL NOT NULL,
+    SAMPLE_NAME VARCHAR(256),
+    VERSION DOMAIN_VERSION,
+    DELETE_FLAG DOMAIN_DELETE_FLAG,
+    CREATE_DATETIME DOMAIN_CREATE_DATETIME,
+    UPDATE_DATETIME DOMAIN_UPDATE_DATETIME,
     PRIMARY KEY (id)
 )

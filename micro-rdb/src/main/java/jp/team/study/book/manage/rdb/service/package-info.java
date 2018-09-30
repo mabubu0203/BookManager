@@ -1,1 +1,1 @@
-package main.java.jp.team.study.book.manage.rdb.service;
+package jp.team.study.book.manage.rdb.service;

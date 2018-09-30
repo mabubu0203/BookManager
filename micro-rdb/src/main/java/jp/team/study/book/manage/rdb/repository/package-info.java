@@ -1,1 +1,1 @@
-package main.java.jp.team.study.book.manage.rdb.repository;
+package jp.team.study.book.manage.rdb.repository;

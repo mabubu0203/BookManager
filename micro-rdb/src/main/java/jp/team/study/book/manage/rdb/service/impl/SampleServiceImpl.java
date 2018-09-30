@@ -16,11 +16,11 @@ public class SampleServiceImpl implements SampleService {
 
     @Override
     public Stream<Sample> getAll() {
-        return master.findAll().stream();
+        return null;
     }
 
     @Override
     public void insert(Sample masterEntity) {
-        master.saveAndFlush(masterEntity);
+        master.save(masterEntity);
     }
 }

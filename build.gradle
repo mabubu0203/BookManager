@@ -142,6 +142,10 @@ project(':micro-interfaces') {
 
 project(':micro-rdb') {
     ext.moduleName = 'jp.team.study.bm.rdb'
+    dependencies {
+        compile project(':micro-interfaces'), project(':micro-validator')
+        testCompile project(':micro-test')
+    }
 }
 
 project(':micro-test') {
