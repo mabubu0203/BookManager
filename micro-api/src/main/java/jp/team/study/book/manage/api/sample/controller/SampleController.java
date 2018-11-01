@@ -1,6 +1,6 @@
 package jp.team.study.book.manage.api.sample.controller;
 
-import io.swagger.annotations.Api;
+
 import jp.team.study.book.manage.rdb.domain.Sample;
 import jp.team.study.book.manage.rdb.service.SampleService;
 import org.springframework.beans.BeanUtils;
@@ -29,7 +29,6 @@ import java.util.stream.Stream;
         value = {"/sample/"},
         produces = MediaType.APPLICATION_JSON_UTF8_VALUE
 )
-@Api(tags = {"Sampleです。"})
 public class SampleController {
 
     @Autowired

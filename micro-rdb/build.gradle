@@ -1,27 +1,15 @@
 dependencies {
 
     // SpringBoot projects
-    compile("org.springframework.boot:spring-boot-starter") {
-        exclude group: 'org.springframework', module: 'spring-core'
-    }
-    compile("org.springframework.boot:spring-boot-starter-data-jpa") {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
-    }
-    compile("org.springframework.boot:spring-boot-starter-data-rest") {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
-    }
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.data:spring-data-rest-hal-browser")
-    compile("org.springframework.boot:spring-boot-starter-validation") {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
-    }
+    compile("org.springframework.boot:spring-boot-starter-validation")
 
     // lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor 'org.projectlombok:lombok'
-
-    // required jaxb
-    compile("javax.xml.bind:jaxb-api")
 
     // JDBC Drivers
     runtimeOnly("org.postgresql:postgresql")

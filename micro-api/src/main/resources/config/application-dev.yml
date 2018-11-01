@@ -4,13 +4,18 @@
 spring:
   aop:
     auto: true
+  application:
+    admin:
+      enabled: false
+  autoconfigure:
+    exclude:
   beaninfo:
     ignore: true
-  boot:
-    admin:
-      client:
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
         enabled: true
-        url: http://localhost:8095/admin
   profiles: dev
   http:
     encoding:
@@ -23,9 +28,9 @@ spring:
       location: classpath:git.properties
   main:
     banner-mode: console
-# ----------------------------------------
-# DATA PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # DATA PROPERTIES
+  # ----------------------------------------
   datasource:
     continue-on-error: false
     driverClassName: org.postgresql.Driver
@@ -39,13 +44,13 @@ spring:
     console:
       enabled: false
 
-# ----------------------------------------
-# INTEGRATION PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # INTEGRATION PROPERTIES
+  # ----------------------------------------
 
-# ----------------------------------------
-# DEVTOOLS PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # DEVTOOLS PROPERTIES
+  # ----------------------------------------
   devtools:
     livereload:
       enabled: true
@@ -53,21 +58,18 @@ spring:
     restart:
       enabled: true
       poll-interval: 1000
-    quiet-period: 400
-  remote:
-    debug:
-      enabled: false
-      local-port: 8000
-    restart:
-      enabled: false
+      quiet-period: 400
+    remote:
+      restart:
+        enabled: false
       secret-header-name: X-AUTH-TOKEN
 # ----------------------------------------
 # WEB PROPERTIES
 # ----------------------------------------
 server:
   port: 8085
-  context-path: /BookManagerApi
   servlet:
+    context-path: /BookManagerApi
     jsp:
       registered: false
   ssl:

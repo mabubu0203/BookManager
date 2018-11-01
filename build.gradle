@@ -25,7 +25,7 @@ buildscript {
 }
 
 plugins {
-    id "org.springframework.boot" version "2.0.5.RELEASE"
+    id "org.springframework.boot" version "2.1.0.RELEASE"
     id "org.sonarqube" version "2.6.2"
 }
 
@@ -70,40 +70,42 @@ allprojects {
     }
 
     javadoc {
-        options {
-            addStringOption("-add-modules", "java.xml.bind,java.xml.ws.annotation")
-            author = true
-            charSet = defaultEncoding
-            docEncoding = defaultEncoding
-            encoding = defaultEncoding
-            links(
-                    "https://docs.oracle.com/javase/10/docs/api/",
-                    "https://docs.spring.io/spring-boot/docs/current/api/"
-            )
-            linkSource = true
-            noHelp = true
-            setMemberLevel(JavadocMemberLevel.PUBLIC)
-            setNoQualifiers(["all"])
+        doFirst {
+            exclude "**/module-info.java"
+            options {
+                addBooleanOption('html5', true)
+                author = true
+                charSet = defaultEncoding
+                docEncoding = defaultEncoding
+                encoding = defaultEncoding
+                links(
+                        "https://docs.oracle.com/en/java/javase/11/docs/api/",
+                        "https://docs.spring.io/spring-boot/docs/current/api/"
+                )
+                linkSource = true
+                noHelp = true
+                setMemberLevel(JavadocMemberLevel.PUBLIC)
+                setNoQualifiers(["all"])
+            }
         }
     }
 
-    tasks.withType(JavaCompile) {
+    compileJava {
         doFirst {
-            options.encoding = defaultEncoding
             sourceCompatibility = jdkVersion
             targetCompatibility = jdkVersion
-            options.compilerArgs = [
-                    '-Xlint:unchecked', '-Xlint:deprecation',
-                    '--add-modules', 'java.xml.bind',
-                    '--add-modules', 'java.xml.ws.annotation',
-                    '--add-exports', 'java.xml.bind/com.sun.istack.internal=ALL-UNNAMED'
+            options.encoding = defaultEncoding
+            options.compilerArgs += [
+                    "-Xlint:unchecked", "-Xlint:deprecation",
+                    "--module-path", classpath.asPath
             ]
+            classpath = files()
         }
     }
 
 }
 
-subprojects{
+subprojects {
 
     apply plugin: 'application'
     apply plugin: 'io.spring.dependency-management'

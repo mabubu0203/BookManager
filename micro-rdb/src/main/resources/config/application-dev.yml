@@ -26,9 +26,9 @@ spring:
       location: classpath:git.properties
   main:
     banner-mode: console
-# ----------------------------------------
-# DATA PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # DATA PROPERTIES
+  # ----------------------------------------
   datasource:
     continue-on-error: false
     driverClassName: org.postgresql.Driver
@@ -42,13 +42,13 @@ spring:
     console:
       enabled: false
 
-# ----------------------------------------
-# INTEGRATION PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # INTEGRATION PROPERTIES
+  # ----------------------------------------
 
-# ----------------------------------------
-# DEVTOOLS PROPERTIES
-# ----------------------------------------
+  # ----------------------------------------
+  # DEVTOOLS PROPERTIES
+  # ----------------------------------------
   devtools:
     livereload:
       enabled: true

@@ -7,7 +7,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * SpringBoot起動クラスです。
@@ -19,7 +18,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @Import({RdbCore.class})
 @EntityScan(basePackageClasses = {ApiApp.class, Jsr310JpaConverters.class})
-@EnableSwagger2
 public class ApiApp extends SpringBootServletInitializer {
 
     /**

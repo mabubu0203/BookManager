@@ -25,7 +25,7 @@ logging:
 spring:
   profiles:
     active: dev
-#    active: production
-#    active: test
+    #    active: production
+    #    active: test
     include: message
 

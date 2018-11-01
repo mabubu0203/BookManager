@@ -50,9 +50,6 @@ BookManager                           … rootプロジェクト
 
 [PgAdmin][]
 [SonarQube][]  
-[Admin][]  
-[RestApiSwagger][]  
-[DataRestSwagger][]  
 [HAL Browser][]  
 
 ## 環境
@@ -61,21 +58,18 @@ BookManager                           … rootプロジェクト
 
 | name              | version
 | :---------------- | :-------
-| OpenJdk           | 10
+| OpenJdk           | 11
 | DockerCompose     | 1.21.2
-| Gradle            | 4.8.1 
+| Gradle            | 4.10 
 | SonarQube         | 7.1
 
 ### Library
 
 | name               | version
 | :----------------- | :------
-| SpringBoot         | 2.0.x
+| SpringBoot         | 2.1.x
 | SpringFox          | 2.x
 
 [PgAdmin]: http://localhost:80/browser/     "PgAdmin"
 [SonarQube]: http://localhost:9000/sonar/     "SonarQube"
-[Admin]: http://localhost:8095/admin     "Admin"
-[RestApiSwagger]: http://localhost:8085/swagger-ui.html     "RestApiSwagger"
-[DataRestSwagger]: http://localhost:8075/swagger-ui.html     "DataRestSwagger"
 [HAL Browser]: http://localhost:8075/     "HAL Browser"
