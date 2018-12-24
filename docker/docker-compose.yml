@@ -3,7 +3,7 @@ version: '3.6'
 services:
 
   postgresql:
-    image: postgres:10.5
+    image: postgres:11.1
     container_name: postgresql
     ports:
       - 5432:5432
@@ -18,7 +18,7 @@ services:
     user: root
 
   pgadmin4:
-    image: dpage/pgadmin4:3.3
+    image: dpage/pgadmin4:3.6
     container_name: pgadmin4
     ports:
       - 80:80
@@ -31,7 +31,7 @@ services:
     restart: always
 
   sonarqube:
-    image: sonarqube:7.1
+    image: sonarqube:7.4-community
     container_name: sonarqube
     depends_on:
       - postgresql
